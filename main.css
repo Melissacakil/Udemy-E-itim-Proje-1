@@ -1,0 +1,184 @@
+
+@charset "utf-8";
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+ 
+.menu {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 10000; /* Ekran aşağı doğru kaydığında menü çubuğunun üstte kalması için */
+}
+ 
+.navbar {
+    max-width: 1000px;
+    margin: auto;
+}
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    color: red !important ;
+    font-size: 30px;
+    transition: 0.2s;
+}
+.navbar-brand:hover{
+    color:rgb(153, 13, 13) !important;
+}
+.navbar ul li a {
+    color: white !important;
+    font-size: 14px !important;
+    margin-right: 10px !important;
+    transition: 0.3s;
+}
+.navbar ul li a:hover{
+    color: rgba(255, 255, 255, 0.651) !important;
+}
+.navbar i {
+    color: white !important;
+    font-size: 18px;
+}
+.banner {
+    height: 100vh;
+    background:url(images/banner.jpg);
+    background-position: 0 60px ;
+    background-size: cover;
+}
+.banner .icerik {
+position: relative;
+max-width: 1000px;
+top: 50%;
+transform: translateY(-50%);
+/*içerik divimin yüksekliğimin yarısı kadar yukarı taşı demek. Dikeyde ortalamak için son iki satır yazılır*/
+margin: auto; /*içeriğin ortalanması için*/
+}
+.banner .icerik h1{
+    color: white ;
+    font-size: 30px;
+    letter-spacing: 2px; /*Harfler arasında boşluk bırakmak için */
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 40px;
+}
+.banner .icerik a{
+    font-size: 16px;
+    padding: 10px 20px; /*iç boşluk vererek butonu büyütebiliriz*/
+    border-radius: 0; /*Köşeler ovalleşmemesi için */
+}
+.bolum1 {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.bolum1 h2 {
+    color: red;
+    font-size: 28px;
+}
+ 
+.bolum1 p {
+    line-height: 30px;
+ 
+}
+.bolum1 a{
+    color: red;
+    font-weight: 300px;
+    font-size:14px;
+    border-radius: 0;
+}
+.bolum2 {
+    margin-top: 80px;
+}
+.bolum2 .col-md-6:nth-child(1) /*Bir sınıf içerisindeki çocuklardan istediğimizi seçmemize yarar*/
+{
+    background-color:rgb(233, 225, 225);
+    padding: 100px 50px; /*üstten 100px sağdan soldan 50px boşluk bırakır.*/
+ 
+}
+.bolum2 .col-md-6:nth-child(2) /*Bir sınıf içerisindeki çocuklardan istediğimizi seçmemize yarar*/
+{
+    background-color:rgb(192, 186, 186);
+    padding: 100px 50px; /*üstten 100px sağdan soldan 50px boşluk bırakır.*/
+   
+}
+.bolum2 h3{
+ color: red;  
+ font-weight: 700;
+ font-size: 24px;
+ margin-bottom: 20px;
+}
+.bolum2 img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.bolum2 p{
+    line-height: 30px; /*satır yüksekliği*/
+    font-size: 16px;
+    letter-spacing: 1px;/*harfler arası boşluk*/
+    font-weight: 300;
+}
+.bolum3 {
+    margin-top: 80px;
+}
+.bolum3 i{
+    display:block; /*İkonu ortalamak için önce blok seviyeyi yani tüm satırı kaplayacak hale getiririz sonra center yaparız.*/
+    text-align: center;
+    font-size: 40px; /* Yazı, ikon boyutu */
+    padding: 35px; /*iç boşluk*/
+    color:grey;
+}
+.bolum3 h5{
+    color: red !important;
+    font-weight:700px !important; /*Yazı kalınlığı*/
+    font-size: 24px;
+    margin-bottom:20px;
+   /* <h5 class="d-flex justify-content-center">TEMPUS FEUGIAT </h5> buradaki d-flex justify-content-center başlığın ortalanması için kullanılır.*/
+}
+.bolum3 p{
+    line-height:30px ; /*Satır aralığı*/
+    font-size: 16px;
+    letter-spacing:1px; /*Harfler arası boşluk*/
+    font-weight: 300px;
+    color: #171717;
+    text-align: justify; /* iki yana ortala */
+}
+/* .bolum3 a{
+   Eğer link ikonunu ortalamak istiyorsak önce a yı bir div içerisine alırız div bağlantıyı block seviyeye getirir sonra divin içine class olarak d-flex justify-content-center tanımlarız
+}*/
+.bolum4 {
+    margin-top: 80px;
+    background-color:rgb(255, 55, 0);
+    color: white;
+    padding-top: 80px;
+}
+.bolum4 h5 {
+    font-size: 28px;
+    font-weight: 700px;
+    margin-bottom: 50px;
+     
+}
+.bolum4 input[type="text"] {
+    background: none; /*arkaplan rengi olmasın*/
+    border: 2px solid #ff747d;
+    color: white;
+}
+.bolum4 input[type="text"]:focus {
+    border: 3px solid white;
+    box-shadow: none;
+}
+
+.bolum4 textarea {
+    background-color: transparent !important; /*arkaplan rengi olmasın*/
+    border: 2px solid #ff747d;
+    color: white !important;
+}
+.bolum4 textarea:focus {
+    border: 3px solid white;
+    box-shadow: none;
+}
+
+@media screen and (max-width:992px)
+{
+    .banner {
+        height: 70vh;
+    }   
+}
+/*ekranı daralttığımızda görsel de boyuta uyumlu olarak küçülsün diye yaparız.*/
